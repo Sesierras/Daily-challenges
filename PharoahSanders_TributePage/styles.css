@@ -39,7 +39,7 @@ header {
       hsla(226, 86%, 11%, 0.459),
       hsla(246, 45%, 52%, 0.384)
     ),
-    url(../img/portada.jpg);
+    url("./img/portada.jpg");
   background-size: cover;
   background-attachment: fixed;
   position: relative;
@@ -191,7 +191,7 @@ header .textos-header {
   align-items: center;
   justify-content: space-evenly;
   border-radius: 5px;
-  box-shadow: 0 0 15px 0 rgb(50, 84, 194);
+  box-shadow: 0 0 15px 0 rgb(255, 255, 255);
 }
 
 .cards .card img {
