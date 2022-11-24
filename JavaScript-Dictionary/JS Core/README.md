@@ -1,4 +1,4 @@
-# JS Core
+# JavaScript Core
 
 ## Table of content:
 1. [Operators](Operators.md)
