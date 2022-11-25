@@ -4,7 +4,7 @@
 # JavaScript Glossary 
 
 Programming reference for JavaScript.<br>
-### [About this Glossary](#Place-2) <span id="place2"></span>
+### [About this Glossary](#Place-1) <span id="place2"></span>
 
 ## Table of content
 1. [JS Core](JS%20Core)
@@ -340,6 +340,6 @@ URLs always start with a protocol(```https```) and usually contain information s
 #### ```WeakSet```
 
 #### ```WebWorkers```
-### [About this](#Place-2)
+### [About this](#Place-1) <span id="place2"></span>
 ## About this glossary
 This repository is based in the work of [Joseph Wambura](https://github.com/josephwambura/JavaScript-Dictionary). 
