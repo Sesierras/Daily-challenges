@@ -1,6 +1,12 @@
-# javascript-dictionary
 
-## Table of content:
+![JavaScript](https://img.shields.io/badge/Javascript_Glossary-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![JavaScript](https://img.shields.io/badge/--230000?logo=javascript&logoColor=ffffff)
+# JavaScript Glossary 
+
+Programming reference for JavaScript.<br>
+### [About this Glossary](#Place-2) <span id="place2"></span>
+
+## Table of content
 1. [JS Core](JS%20Core)
 1. [OOP](OOP)
 1. [Design Patterns](Design%20Patterns)
@@ -334,3 +340,6 @@ URLs always start with a protocol(```https```) and usually contain information s
 #### ```WeakSet```
 
 #### ```WebWorkers```
+### [About this](#Place-2)
+## About this glossary
+This repository is based in the work of [Joseph Wambura](https://github.com/josephwambura/JavaScript-Dictionary). 
