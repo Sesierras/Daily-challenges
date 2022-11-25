@@ -1,22 +1,33 @@
 
 ![JavaScript](https://img.shields.io/badge/Javascript_Glossary-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-![JavaScript](https://img.shields.io/badge/--230000?logo=javascript&logoColor=ffffff)
+
 # JavaScript Glossary 
 
-Programming reference for JavaScript.<br>
-### [About this Glossary](#Place-1)
+Programming reference for JavaScript.
+[About authors](#About)
+
+
+1. [Operators](:/17a4db756b5c493a82af1ac3c893f7cc)
+1. [Scope and Closure](:/9dc3b76991364b1abcf764b918784ae9)
+1. [This](:/16e38526bb13422596d380165ee43d7a)
+1. [Object](:/0db96836c7904bf8b1ca5731e1e04d7e)
+
+## How to use
+* The principal guide is the content table, use the checkbox to control your advance in the Glossary and 
 
 ## Table of content
-1. [JS Core](JS%20Core)
-1. [OOP](OOP)
-1. [Design Patterns](Design%20Patterns)
-1. [Architecture principles](Architecture%20principles)
-1. [Functional programming](Functional%20programming)
-1. [Client-Server Communication](Client-Server%20Communication)
-1. [Testing in JS](Testing%20in%20JS)
+1. - [ ] [JS Core](JS%20Core)
+1. - [ ] [OOP](OOP)
+1. - [ ] [Design Patterns](Design%20Patterns)
+1. - [ ] [Architecture principles](Architecture%20principles)
+1. - [ ] [Functional programming](Functional%20programming)
+1.  - [ ] [Client-Server Communication](Client-Server%20Communication)
+1. - [ ] [Testing in JS](Testing%20in%20JS)
+1. 
 
 
-# Dictionary:
+## Dictionary:
+
 ## A:
 
 #### ```AST```
@@ -27,10 +38,27 @@ Comparison operator (x == y, where x and y are values, produces true or false).
 
 [Read more about Abstract Equality](JS%20Core/Operators.md#abstract-equality)
 
-#### ```AJAX```
+#### ```AJAX``` [📚](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 
-#### ```Arrow Functions```
+####  ```Arrow Functions``` [📚](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+An arrow function expression is a compact alternative to a traditional function expression, with some semantic differences and deliberate limitations in usage:
 
+* Arrow functions don't have their own bindings to this, arguments, or super, and should not be used as methods.
+* Arrow functions cannot be used as constructors. Calling them with new throws a TypeError. They also don't * have access to the new.target keyword.
+* Arrow functions cannot use yield within their body and cannot be created as generator functions.
+
+ **Example** 
+```js
+const materials = [
+  'Hydrogen',
+  'Helium',
+  'Lithium',
+  'Beryllium'
+];
+console.log(materials.map(material => material.length));
+// expected output: Array [8, 6, 7, 9]
+
+```
 #### ```Authentication```
 Who you are. (login + password)
 
@@ -341,5 +369,5 @@ URLs always start with a protocol(```https```) and usually contain information s
 
 #### ```WebWorkers```
 
-## About this glossary <span id="place1"></span>
-This repository is based in the work of [Joseph Wambura](https://github.com/josephwambura/JavaScript-Dictionary). 
+###  About this Glossary   ![JavaScript](https://img.shields.io/badge/--230000?logo=javascript&logoColor=ffffff)  <a id="About"> </a>
+This repository is based in the work of [Joseph Wambura](https://github.com/josephwambura/JavaScript-Dictionary), with some features added for [me](https://github.com/Sesierras)
