@@ -8,8 +8,9 @@
         align-items: center;
         min-height: 100vh;
         user-select: none;
-        background: #d8d5d5;
+        background: #fffcfca1;
         font-family: 'Nanum Myeongjo', serif;
+        background-image: url("https: //images.pexels.com/photos/1260727/pexels-photo-1260727.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
     }
     h1
     {
