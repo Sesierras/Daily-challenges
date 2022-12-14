@@ -4272,7 +4272,7 @@ textarea.form-control {
 .footer {
   position: relative;
   z-index: 1;
-  background-color: ghostwhite;
+  /* background-color: ghostwhite; */
 }
 
 .footer .widget {
