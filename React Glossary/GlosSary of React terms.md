@@ -62,14 +62,14 @@ JSX is a **syntax extension to JavaScript**. It is similar to a template languag
 
 React DOM uses camelCase property naming convention instead of HTML attribute names. For example, tabindex becomes tabIndex in JSX. The attribute class is also written as className since class is a reserved word in
 JavaScript:
-```
+```Jsx
 <h1 className="hello">My name is Clementine!</h1>
 ```
 
 
 * ### Elements
 React elements are the building blocks of React applications. One might confuse elements with a more widely known concept of “components”. An element describes what you want to see on the screen. React elements are immutable.
-```React
+```Jsx
 const element = <h1>Hello, world</h1>;
 ```
 Typically, elements are not used directly, but get returned from components.
@@ -77,7 +77,7 @@ Typically, elements are not used directly, but get returned from components.
 * ### Components
 React components are small, reusable pieces of code that return a React element to be rendered to the page. The simplest version of React component is a plain JavaScript function that returns a React element:
 
-```React
+```Jsx
 function Welcome(props) {
   return <h1>Hello, {props.name}</h1>;
 }
@@ -85,7 +85,7 @@ function Welcome(props) {
 
 
 Components can also be ES6 classes:
-```React
+```Jsx
 class Welcome extends React.Component {
   render() {
     return <h1>Hello, {this.props.name}</h1>;
@@ -99,7 +99,7 @@ Components can be broken down into distinct pieces of functionality and used wit
 props are inputs to a React component. They are data passed down from a parent component to a child component.
 
 Remember that props are readonly. They should not be modified in any way:
-```
+```Jsx
 // Wrong!
 props.number = 42;
 ```
@@ -118,7 +118,7 @@ function Welcome(props) {
 ```
 For components defined as classes, use this.props.children:
 
-```
+```Jsx
 class Welcome extends React.Component {
   render() {
     return <p>{this.props.children}</p>;
@@ -180,7 +180,7 @@ When a component’s props or state change, React decides whether an actual DOM 
 - ### Hooks in React
 
 Here is an example of a Hook; here we are using the useState Hook to keep track of the application state..
-```
+```Jsx
 import React, { useState } from "react"; // Too important. State generally refers
 to application data or properties that need to be tracked.
 import ReactDOM from "react-dom/client"; //You must import Hooks from react.
@@ -225,7 +225,7 @@ There are **3** rules for hooks:
 ### Hook useState
 The React useState Hook allows us to track state in a function component. State generally refers to data or properties that need to be tracking in an application.
 
-```
+```Jsx
 `Use the state variable in the rendered component.`
 
 `At the top of your component, import the useState Hook.`
@@ -244,16 +244,49 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<FavoriteColor />);
 ```
 ### Hook useEffect
+### [Hook useEffect](https://dmitripavlutin.com/react-useeffect-explanation/)
 
+The useEffect Hook allows you to perform side effects in your components. Some examples of side effects are: ***fetching data, directly updating the DOM, and timers.*** UseEffect accepts two arguments. The second argument is optional.
+```useEffect(<function>, <dependency>)```
 
-xxxxxxxx
+A functional React component uses props and/or state to calculate the output. If the functional component makes calculations that don't target the output value, then these calculations are named side-effects.
+
+- Examples of side-effects are fetch requests, manipulating DOM directly, using timer functions like setTimeout(), and more.
+
+The component rendering and side-effect logic are independent. It would be a mistake to perform side-effects directly in the body of the component, which is primarily used to compute the output.
+
+```jsx
+function Greet({ name }) {
+  const message = `Hello, ${name}!`; // Calculates output
+  // Bad!
+  document.title = `Greetings to ${name}`; // Side-effect!
+  return <div>{message}</div>;       // Calculates output
+}
+```
+How to decouple rendering from the side-effect? Welcome useEffect() — the hook that runs side-effects independently of rendering.
+
+```jsx
+import { useEffect } from 'react';
+function Greet({ name }) {
+  const message = `Hello, ${name}!`;   // Calculates output
+  useEffect(() => {
+    // Good!
+    document.title = `Greetings to ${name}`; // Side-effect!
+  }, [name]);
+  return <div>{message}</div>;         // Calculates output
+}
+```
+
+How often the component renders isn't something you can control — if React wants to render the component, you cannot stop it. **useEffect(callback, dependencies)** is the hook that manages the side-effects in functional components. callback argument is a function to put the side-effect logic. dependencies is a list of dependencies of your side-effect: being props or state values.
+
+useEffect(callback, dependencies) invokes the callback after initial mounting, and on later renderings, if any value inside dependencies has changed. The next step to mastering useEffect() is to understand and avoid the infinite loop pitfall.
+
 <div align="right">
  <p><a href="#table"><img src=https://img.shields.io/badge/_Return_to_table_of_contents-%233330.svg?style=for-the-badge&logo=react </a></p> <p style="text-align:right;" ></p>
   </div>
 
 
 * * *
-
 3. ## [React Styles](https://www.w3schools.com/react/react_css.asp) <a id="styles"> </a>
 
 There are many ways to style React with CSS, this tutorial will take a closer look at inline styling, and CSS stylesheet.
@@ -298,7 +331,7 @@ class MyHeader extends React.Component {
 ```
 
 Import the stylesheet in your component:
-```
+```Jsx
 `App.js:`
 import React from 'react';
 import ReactDOM from 'react-dom/client';
@@ -315,7 +348,7 @@ export default Car;
 
 
 Import the component in your application:
-```
+```Jsx
 `index.js:`
 import React from 'react';
 import ReactDOM from 'react-dom/client';
@@ -335,19 +368,19 @@ ReactDOM.render(<Car />, document.getElementById('root'));
 ### Events Javascript vs React
  React events are named using camelCase, rather than lowercase. With **JSX you pass a function as the event handler**, rather than a string.
 For example, the HTML:
-```html
+```Jsx
 <button onclick="activateLasers()">
   Activate Lasers
 </button>
 ```
 is slightly different in React:
-```
+```Jsx
 <button onClick={activateLasers}>
   Activate Lasers
 </button>
 ```
 Another difference is that you cannot return false to prevent default behavior in React. You must call preventDefault explicitly. For example, with plain HTML, to prevent the default form behavior of submitting, you can write:
-```html
+```Jsx
 <form onsubmit="console.log('You clicked submit.'); return false">
   <button type="submit">Submit</button>
 </form>
