@@ -265,12 +265,12 @@ button {
 .navbar-light .navbar-nav .nav-link.active,
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .show>.nav-link {
-    color: #eec53d;
+    color: #ee3ddf;
 }
 
 .navbar-light .navbar-nav .nav-link:focus,
 .navbar-light .navbar-nav .nav-link:hover {
-    color: #eec53d;
+    color: #da2092;
 }
 
 .call_section {
@@ -966,9 +966,9 @@ button {
 }
 
 .footer_logo {
-    width: 100%;
+    width: 200%;
     float: left;
-    padding: 134px 0px;
+    /* padding: 134px 0px; */
 }
 
 .footer_menu {
