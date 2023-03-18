@@ -292,11 +292,45 @@ button {
 .call_section li a {
     color: #000;
 }
+.call_section li a:hover img {
+    opacity: 0.8;
+    transition: opacity 0.3s ease-in-out;
+}
+.call_section li a:hover img {
+    filter: saturate(0.5);
+    transition: filter 0.3s ease-in-out;
+}
+.call_section li a img {
+    transition: opacity 0.3s ease-in-out;
+}
+.call_section li a:hover img {
+    background-color: rgba(255, 255, 255, 0.151);
+    transition: background-color 0.3s ease-in-out;
+}
 
+.call_section li a:hover img {
+    opacity: 1;
+}
 .padding_left_15 {
     padding-left: 10px;
 }
+.call_section li a:hover img {
+    animation: blink 0.25s linear infinite;
+}
 
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
 .donate_bt {
     width: 50px;
     float: left;
