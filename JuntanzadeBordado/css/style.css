@@ -323,26 +323,75 @@ button {
     width: 100%;
     float: left;
 }
-
 .banner_taital {
     width: 100%;
     float: left;
     font-size: 50px;
-    color: #f7f7fd;
+    color: #552344;
     font-weight: bold;
+    background-color: #b4b4b48a;
+    transition: transform 0.5s ease-in-out;
+    padding: 20px;
+    opacity: 1;
 }
+
 .banner_text {
     width: 100%;
     float: left;
     font-size: 16px;
-    color: #f7f7fd;
+    color: #ffffff;
     margin: 0px;
+    background-color: #b4b4b48a;
+    transition: transform 0.5s ease-in-out;
+    padding: 10px;
+    opacity: 1;
+}
+
+.banner_taital:hover {
+    transform: scale(1.1);
+    font-size: 60px;
+    color: #552344;
+    /* color: #2b1f26; */
+    opacity: 1;
+    background-color: #b3abab69;
+    text-align: center;
+}
+
+.banner_text:hover {
+    transform: scale(1.1);
+    font-size: 18px;
+    opacity: 1;
+    color: #f3eef0;
+    background-color: #b3abab69;
+    text-align: center;
+}
+.banner_taital,.banner_text {
+    transition: all 0.5s ease-in-out;
+}
+
+.banner_taital,.banner_text {
+    animation: centelleo 4s linear infinite;
+}
+
+@keyframes centelleo {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .btn_main {
     width: 100%;
     float: left;
     padding-top: 40px;
+    background-color: none;
 }
 
 .about_bt {
@@ -354,7 +403,7 @@ button {
     width: 100%;
     float: left;
     font-size: 18px;
-    color: #030101;
+    color: #faf9f9;
     background-color: #ffffff;
     text-align: center;
     padding: 10px 0px;
@@ -363,11 +412,11 @@ button {
 
 .about_bt a:hover {
     color: #000;
-    background-color: #fcce2d;
+    background-color: #8d0931;
 }
 .about_bt.active a {
-    color: #000;
-    background-color: #fcce2d;
+    color: #ffffff;
+    background-color: #ac2a51;
 }
 
 .quote_bt {
@@ -381,15 +430,15 @@ button {
     float: left;
     font-size: 18px;
     color: #ffffff;
-    background-color: #191919;
+    background-color: #000000;
     text-align: center;
     padding: 10px 0px;
     border-radius: 40px;
 }
 
 .quote_bt a:hover {
-    color: #030101;
-    background-color: #fcce2d;
+    color: #ffffff;
+    background-color: #ac2a51;
 }
 
 #my_slider a.carousel-control-prev {
@@ -452,7 +501,7 @@ button {
     position: relative;
     width: 40px;
     height: 17px;
-    background-color: #fcce2d;
+    background-color: #8d0931;
     left: 0px;
     right: 0px;
     margin: 0 auto;
@@ -494,7 +543,7 @@ button {
 }
 
 .image_main:hover .image_8 {
-    opacity: ;
+    opacity: 5;
 }
 
 .image_main:hover .text_main {
@@ -610,7 +659,7 @@ button {
 .plus_text {
     width: 50px;
     height: 50px;
-    background-color: #fcce2d;
+    background-color: #8d0931;
     color: #ffffff;
     font-size: 24px;
     display: flex;
@@ -677,7 +726,7 @@ button {
     float: left;
     font-size: 16px;
     color: #ffffff;
-    background-color: #fcce2d;
+    background-color: #ac2a51;
     text-align: center;
     padding: 14px;
     border-radius: 40px;
@@ -792,7 +841,7 @@ button {
 #main_slider .carousel-control-next:hover,
 #main_slider .carousel-control-prev:focus,
 #main_slider .carousel-control-next:focus {
-    background: #fcce2d;
+    background: #ac2a51;
     color: #fff;
 }
 
@@ -837,7 +886,7 @@ button {
 }
 .get_quote_bt a:hover {
     color: #ffffff;
-    background-color: #fcce2d;
+    background-color: #ac2a51;
 }
 .dolor_text{
     width: 100%;
@@ -928,7 +977,7 @@ button {
     font-size: 20px;
     color: #151515;
     text-align: center;
-    background-color: #fcce2d;
+    background-color: #ac2a51;
     padding: 10px 0px;
     text-transform: uppercase;
     border-radius: 40px;
@@ -955,7 +1004,7 @@ button {
     color: #ffffff;
 }
 .call_text a:hover {
-    color: #fcce2d;
+    color: #ac2a51;
 }
 
 
@@ -991,7 +1040,7 @@ button {
     color: #ffffff;
 }
 .footer_menu li a:hover{
-    color: #fcce2d;
+    color: #ac2a51;
 }
 
 .information_text {
@@ -1041,7 +1090,7 @@ button {
 }
 
 .copyright_text a:hover {
-    color: #fcce2d;
+    color: #ac2a51;
 }
 
 .margin_top_90 {
